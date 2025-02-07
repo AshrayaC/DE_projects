@@ -1,50 +1,32 @@
-# Spark Streaming with Kafka - Twitter Sentiment Analysis
+# **Spark Streaming Twitter Sentiment Analysis**
 
-This project demonstrates how to use Spark Streaming and Kafka for real-time sentiment analysis of tweets. The goal is to collect tweets from Twitter in real-time using Kafka, process the data using Spark Streaming, and perform sentiment analysis on the tweets.
+This project is a **real-time sentiment analysis** of Twitter tweets using **Apache Kafka** and **Apache Spark Streaming**. The goal is to stream live Twitter data, analyze the sentiment of the tweets, and process the data in real-time.
 
-## Prerequisites
+### **Prerequisites**
+Before you start, make sure you have the following installed:
 
-Before you begin, ensure you have the following installed:
+1. **Java 8 or higher** (Required for Apache Spark and Kafka)
+   - [Install Java](https://openjdk.java.net/install/)
+2. **Apache Spark** (For streaming and processing data)
+   - [Download Spark](https://spark.apache.org/downloads.html)
+3. **Apache Kafka** (For real-time data streaming)
+   - [Install Kafka](https://kafka.apache.org/quickstart)
+4. **Python 3.x** (For the Python implementation)
+   - [Download Python](https://www.python.org/downloads/)
+5. **PySpark** (Python API for Apache Spark)
+   - Install via pip: `pip install pyspark`
+6. **Tweepy** (For Twitter API interaction)
+   - Install via pip: `pip install tweepy`
+7. **Git** (For version control)
+   - [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+8. **Xcode** (Required for compiling dependencies on macOS)
 
-1. **Java**:
-   - Install Java 11 or higher.
-   - You can install Java via Homebrew:
-     ```bash
-     brew install openjdk@11
-     ```
+### **Setup Instructions**
 
-2. **Apache Spark**:
-   - Install Apache Spark with:
-     ```bash
-     brew install apache-spark
-     ```
+1. **Clone the repository**:
 
-3. **Apache Kafka**:
-   - Install Apache Kafka using Homebrew:
-     ```bash
-     brew install kafka
-     ```
+   Clone the project to your local machine using Git:
 
-4. **Python & PySpark**:
-   - Install Python (Python 3.x recommended).
-   - Install PySpark:
-     ```bash
-     pip install pyspark
-     ```
-
-5. **Twitter API Access**:
-   - You'll need to have access to the Twitter API. Create a Twitter Developer account and create an app to get the necessary API keys.
-
-6. **Kafka Topics**:
-   - You need to create a Kafka topic to send and receive messages. Use the following commands to create the topic:
-     ```bash
-     kafka-topics --create --topic twitter-stream --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
-     ```
-
-## Project Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/spark_streaming_kafka.git
-cd spark_streaming_kafka
+   ```bash
+   git clone https://github.com/AshrayaC/DE_projects.git
+   cd DE_projects
