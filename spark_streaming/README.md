@@ -30,3 +30,82 @@ Before you start, make sure you have the following installed:
    ```bash
    git clone https://github.com/AshrayaC/DE_projects.git
    cd DE_projects
+   ```
+
+2. **Install Required Libraries**
+
+   Install the required Python libraries using pip:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Configure Twitter API Keys**
+
+   To get access to Twitter's API, create a Twitter Developer Account and generate API keys. Follow the instructions on Twitter's Developer Platform to create an application and get the keys.
+
+   After generating the keys, create a `.env` file in the project root with the following content:
+
+   ```bash
+   CONSUMER_KEY=your_consumer_key
+   CONSUMER_SECRET=your_consumer_secret
+   ACCESS_TOKEN=your_access_token
+   ACCESS_TOKEN_SECRET=your_access_token_secret
+   ```
+
+### **How It Works**
+
+1. **Kafka Producer**: Fetches live tweets from the Twitter API using Tweepy and sends them to a Kafka topic.
+2. **Spark Streaming Consumer**: A Spark Streaming job reads data from the Kafka topic in real-time, processes the tweet text, and performs sentiment analysis using a basic sentiment analysis model.
+3. **Output**: The sentiment analysis results are displayed or stored in a specified format (CSV, database, etc.).
+
+### **Running the Project**
+
+Once everything is set up, follow these steps:
+
+1. **Start Kafka**
+
+   Make sure your Kafka server is running.
+
+   ```bash
+   # Start Zookeeper
+   bin/zookeeper-server-start.sh config/zookeeper.properties
+
+   # Start Kafka
+   bin/kafka-server-start.sh config/server.properties
+   ```
+
+2. **Run the Kafka Producer**
+
+   Run the Twitter streaming producer to fetch tweets and send them to Kafka:
+
+   ```bash
+   python spark_streaming/twitter_producer.py
+   ```
+
+3. **Start Spark Streaming Job**
+
+   To start processing the real-time tweets, run the Spark Streaming job:
+
+   ```bash
+   spark-submit --master local[2] --jars /path/to/kafka-clients.jar /path/to/spark_streaming_twitter.py
+   ```
+
+4. **Monitor the Output**
+
+   The Spark job will continuously process tweets and output sentiment analysis results to the console or a database.
+
+### **Project Structure**
+
+```
+DE_projects/
+│
+├── README.md               # Project overview and setup instructions
+├── spark_streaming/        # Contains Spark Streaming job files
+│   ├── twitter_producer.py
+│   ├── spark_streaming_twitter.py
+├── requirements.txt        # Python dependencies
+└── .env                    # Twitter API keys (do not commit to GitHub)
+```
+
+
