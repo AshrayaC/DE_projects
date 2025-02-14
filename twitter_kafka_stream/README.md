@@ -80,7 +80,7 @@ Once everything is set up, follow these steps:
    Run the Twitter streaming producer to fetch tweets and send them to Kafka:
 
    ```bash
-   python spark_streaming/twitter_producer.py
+   python twitter_kafka_stream/kafka_producer.py
    ```
 
 3. **Start Spark Streaming Job**
@@ -88,7 +88,7 @@ Once everything is set up, follow these steps:
    To start processing the real-time tweets, run the Spark Streaming job:
 
    ```bash
-   spark-submit --master local[2] --jars /path/to/kafka-clients.jar /path/to/spark_streaming_twitter.py
+   spark-submit --master local[2] --jars /path/to/kafka-clients.jar /path/to/psark_consumer.py
    ```
 
 4. **Monitor the Output**
