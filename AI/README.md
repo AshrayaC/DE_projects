@@ -6,41 +6,21 @@ This project implements an AI-powered data retrieval system using LLMs (Large La
 
 **Features**
 
-Converts text data into vector embeddings for efficient searching.
-
-Stores and retrieves embeddings using FAISS (Facebook AI Similarity Search).
-
-Uses OpenAI's GPT-4 or other LLMs to generate intelligent responses.
-
-Provides an API endpoint for querying the system.
-
-Deployable on Flask, FastAPI, AWS Lambda, or Hugging Face Spaces.
+1. Converts text data into vector embeddings for efficient searching.
+2. Stores and retrieves embeddings using FAISS (Facebook AI Similarity Search).
+3. Uses OpenAI's GPT-4 or other LLMs to generate intelligent responses.
+4. Provides an API endpoint for querying the system.
+5. Deployable on Flask, FastAPI, AWS Lambda, or Hugging Face Spaces.
 
 **Tech Stack**
+1. Python
+2. FAISS for vector storage
+3. LangChain for RAG implementation
+4. Sentence-Transformers for text embeddings
+5. OpenAI API for LLM-powered responses
+6. Flask/FastAPI for serving as an API
 
-Python
-
-FAISS for vector storage
-
-LangChain for RAG implementation
-
-Sentence-Transformers for text embeddings
-
-OpenAI API for LLM-powered responses
-
-Flask/FastAPI for serving as an API
-
-Project Structure
-
-ai-data-retrieval/
- ├── app.py               # API server
- ├── embeddings.py        # Convert dataset into vector embeddings
- ├── search.py            # Query processing and document retrieval
- ├── requirements.txt     # Project dependencies
- ├── README.md            # Project documentation
- ├── data/                # Dataset files
-
-Setup and Installation
+### **Setup and Installation**
 
 1. Clone the Repository
 
