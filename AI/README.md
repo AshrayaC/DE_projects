@@ -22,41 +22,28 @@ This project implements an AI-powered data retrieval system using LLMs (Large La
 
 ### **Setup and Installation**
 
-1. Clone the Repository
+1. **Clone the Repository**S
 
-git clone https://github.com/yourusername/ai-data-retrieval.git
-cd ai-data-retrieval
+    git clone https://github.com/yourusername/ai-data-retrieval.git
+    cd ai-data-retrieval
 
-2. Install Dependencies
+2. **Install Dependencies**
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
-3. Set Up OpenAI API Key
+3. **Set Up OpenAI API Key**
 
-Obtain an API key from OpenAI and set it in your environment:
+    Obtain an API key from OpenAI and set it in your environment:
 
-export OPENAI_API_KEY="your-api-key"
+    export OPENAI_API_KEY="your-api-key"
 
-4. Run the Application
+4. **Run the Application**
 
-python app.py
+    python app.py
 
-5. Test the API
+5. **Test the API**
 
-Send a query using curl:
+    Send a query using curl:
 
-curl -X POST "http://127.0.0.1:5000/search" -H "Content-Type: application/json" -d '{"query": "What is AI?"}'
+    curl -X POST "http://127.0.0.1:5000/search" -H "Content-Type: application/json" -d '{"query": "What is AI?"}'
 
-Future Enhancements
-
-Add UI using Streamlit
-
-Support multiple data sources (PDFs, SQL databases)
-
-Use alternative LLMs (Mistral, Claude, Llama)
-
-Improve retrieval ranking using hybrid search
-
-License
-
-This project is licensed under the MIT License.
