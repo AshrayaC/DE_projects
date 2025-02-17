@@ -1,10 +1,10 @@
-AI-Powered Data Retrieval System
+# **AI-Powered Data Retrieval System**
 
-Project Overview
+**Project Overview**
 
 This project implements an AI-powered data retrieval system using LLMs (Large Language Models), RAG (Retrieval-Augmented Generation), and a vector database. Users can search for information in a dataset using natural language queries, and the system will retrieve relevant documents and generate AI-powered responses.
 
-Features
+**Features**
 
 Converts text data into vector embeddings for efficient searching.
 
@@ -16,7 +16,7 @@ Provides an API endpoint for querying the system.
 
 Deployable on Flask, FastAPI, AWS Lambda, or Hugging Face Spaces.
 
-Tech Stack
+**Tech Stack**
 
 Python
 
