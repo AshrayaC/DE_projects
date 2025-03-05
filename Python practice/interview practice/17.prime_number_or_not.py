@@ -5,7 +5,7 @@ def prime_number(n):
     elif n > 1 :
         for i in range(2,n):
             if n % i == 0:
-                count = 0
-                break:
-    if flag === 
-            
+                return False
+        return True
+   
+print(prime_number(0))
