@@ -1,8 +1,9 @@
 def rep_char(input_str, n):
     output_str = ""
 
-    for i in input_str :
-        output_str = output_str + j ) * n
+    for j in input_str:  # Loop through each character
+        output_str = output_str+ (j * n)  # Repeat each character `n` times
+    
     return output_str
 
-print(rep_char('sferr', 2))
+print(rep_char('sferr', 2))  # Expected output: 'ssffeererr'
