@@ -1,5 +1,5 @@
 
-def find_missing_int(list):
+def find_missing_int(l):
     
     list_dict = {}
     

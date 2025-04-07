@@ -8,4 +8,3 @@ def count_list(input_list):
     return count
 
 print(count_list([1,2,3,4, 0 ]))
-print(count_list([]))

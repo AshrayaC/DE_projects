@@ -1,3 +1,4 @@
+#The function f_sum_zero(l) checks if there are two numbers in the list l that sum up to zero.
 
 def f_sum_zero(l):
     if len(l) < 2:
