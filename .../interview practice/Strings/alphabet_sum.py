@@ -7,7 +7,11 @@ def words_sum(word):
 
 
 def sum_alphabet(words):
-    return [words_sum(word) for word in words]
+
+    r = []
+    for a in words:
+        r.append(words_sum(a))
+    return r
 
 # Example usage:
 words_list = ["sport", "code", "chatgpt"]

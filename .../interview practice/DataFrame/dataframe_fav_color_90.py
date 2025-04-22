@@ -2,6 +2,7 @@ import pandas as pd
 
 def grades_colors(students_df):
     # Filter the dataframe based on favorite color and grade conditions
+  
     filtered_df = students_df[(students_df['favorite_color'].isin(['green', 'red'])) & (students_df['grade'] > 90)]
     return filtered_df
 
@@ -13,6 +14,6 @@ data = {
     'grade': [91, 95, 82, 75, 93]
 }
 students_df = pd.DataFrame(data)
-
+print(students_df)
 result = grades_colors(students_df)
 print(result)
